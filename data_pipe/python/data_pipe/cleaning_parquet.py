@@ -3,8 +3,8 @@ import pandas as pd
 from langdetect import detect
 
 
-input_folder = "ReviewAnalyzer\data\Parquet_Files"
-
+#input_folder = "ReviewAnalyzer\data\Parquet_Files"
+input_folder = "/dbfs/FileStore/rawParquet/" 
 
 def load_parquet(file_path):
     try:
@@ -67,7 +67,7 @@ parquet_files = [
 ]
 
 
-output_folder = "ReviewAnalyzer\data\CleanParquets"
+output_folder = "/dbfs/FileStore/cleanParquet/"
 
 for idx, file_path in enumerate(parquet_files, start=1):
     print(
